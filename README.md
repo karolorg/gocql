@@ -23,12 +23,11 @@ In general, the gocql team will focus on supporting the current and previous ver
 Installation
 ------------
 
-This is a drop-in replacement to gocql, it reuses the `github.com/gocql/gocql` import path.
+This is a drop-in replacement to gocql, it uses the `github.com/scylladb/gocql` import path.
 
-Add the following line to your project `go.mod` file.
-
+Add module requirement to your `go.mod` file:
 ```
-replace github.com/gocql/gocql => github.com/scylladb/gocql latest
+go mod get github.com/scylladb/gocql
 ```
 
 and run 
