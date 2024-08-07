@@ -119,6 +119,9 @@ type ClusterConfig struct {
 	// Default reconnection policy to use for reconnecting before trying to mark host as down.
 	ReconnectionPolicy ReconnectionPolicy
 
+	// A reconnection policy to use for reconnecting when connecting to the cluster first time.
+	InitialReconnectionPolicy ReconnectionPolicy
+
 	// The keepalive period to use, enabled if > 0 (default: 15 seconds)
 	// SocketKeepalive is used to set up the default dialer and is ignored if Dialer or HostDialer is provided.
 	SocketKeepalive time.Duration
@@ -305,6 +308,7 @@ func NewCluster(hosts ...string) *ClusterConfig {
 		ReconnectInterval:            60 * time.Second,
 		ConvictionPolicy:             &SimpleConvictionPolicy{},
 		ReconnectionPolicy:           &ConstantReconnectionPolicy{MaxRetries: 3, Interval: 1 * time.Second},
+		InitialReconnectionPolicy:    &NoReconnectionPolicy{},
 		SocketKeepalive:              15 * time.Second,
 		WriteCoalesceWaitTime:        200 * time.Microsecond,
 		MetadataSchemaRequestTimeout: 60 * time.Second,
