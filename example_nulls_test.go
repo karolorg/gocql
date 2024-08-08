@@ -2,8 +2,9 @@ package gocql_test
 
 import (
 	"fmt"
-	"github.com/gocql/gocql"
 	"log"
+
+	"github.com/karolorg/gocql"
 )
 
 // Example_nulls demonstrates how to distinguish between null and zero value when needed.

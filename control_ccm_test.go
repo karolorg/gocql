@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gocql/gocql/internal/ccm"
+	"github.com/karolorg/gocql/internal/ccm"
 )
 
 type TestHostFilter struct {

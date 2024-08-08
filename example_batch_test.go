@@ -3,8 +3,9 @@ package gocql_test
 import (
 	"context"
 	"fmt"
-	"github.com/gocql/gocql"
 	"log"
+
+	"github.com/karolorg/gocql"
 )
 
 // Example_batch demonstrates how to execute a batch of statements.

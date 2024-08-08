@@ -2,9 +2,10 @@ package gocql_test
 
 import (
 	"fmt"
-	"github.com/gocql/gocql"
 	"log"
 	"sort"
+
+	"github.com/karolorg/gocql"
 )
 
 // Example_set demonstrates how to use sets.

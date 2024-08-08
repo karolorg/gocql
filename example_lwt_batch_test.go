@@ -3,8 +3,9 @@ package gocql_test
 import (
 	"context"
 	"fmt"
-	"github.com/gocql/gocql"
 	"log"
+
+	"github.com/karolorg/gocql"
 )
 
 // ExampleSession_MapExecuteBatchCAS demonstrates how to execute a batch lightweight transaction.

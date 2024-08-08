@@ -2,8 +2,9 @@ package gocql_test
 
 import (
 	"fmt"
-	"github.com/gocql/gocql"
 	"log"
+
+	"github.com/karolorg/gocql"
 )
 
 // Example_paging demonstrates how to manually fetch pages and use page state.
